@@ -1,3 +1,17 @@
+     <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $name = htmlspecialchars($_POST['name']);
+        $email = htmlspecialchars($_POST['email']);
+        $phone = htmlspecialchars($_POST['phone']);
+        $gender = htmlspecialchars($_POST['gender']);
+        $course = htmlspecialchars($_POST['course']);
+        $address = htmlspecialchars($_POST['address']);
+    } else {
+        echo "<h2>No data submitted.</h2>";
+        exit;
+    }
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,18 +66,6 @@
     <p><strong>Address:</strong> <?= nl2br($address) ?></p>
     <a href="index.html" class="back-btn">← Go Back</a>
   </div>
-      <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $name = htmlspecialchars($_POST['name']);
-        $email = htmlspecialchars($_POST['email']);
-        $phone = htmlspecialchars($_POST['phone']);
-        $gender = htmlspecialchars($_POST['gender']);
-        $course = htmlspecialchars($_POST['course']);
-        $address = htmlspecialchars($_POST['address']);
-    } else {
-        echo "<h2>No data submitted.</h2>";
-        exit;
-    }
-    ?>
 </body>
 </html>
+
