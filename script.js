@@ -1,13 +1,11 @@
 $(document).ready(function(){
 
-  // Smooth form animation
   $("input, textarea, select").on("focus", function(){
     $(this).css("background-color", "#eef7ff");
   }).on("blur", function(){
     $(this).css("background-color", "#fff");
   });
 
-  // Simple validation
   $("#regForm").submit(function(e){
     let name = $("input[name='name']").val().trim();
     let phone = $("input[name='phone']").val().trim();
@@ -32,3 +30,4 @@ $(document).ready(function(){
     }
   });
 });
+
